@@ -6,34 +6,58 @@
   <title>Filth & Glitter</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script defer src="app.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <h1>Filth & Glitter</h1>
+      <h1 class="fade-in">Filth & Glitter</h1>
     </header>
-    <section class="about">
-      <img src="img/01.jpg" alt="">
-      <p>Filth & Glitter are electronic music producers. Their music is a blend of EBM, darkwave, electronica and industrial with influences ranging from Dead or Alive, Pet Shop Boys, Depeche Mode to New Order.</p>
+    <!-- END header -->
+    <section class="about grid">
+      <img src="img/01.jpg" alt="image of man with sunglasses" width="800" height="800" class="fade-in">
+      <p class="fade-in">Filth & Glitter are electronic music producers. Their music is a blend of EBM, darkwave, electronica and industrial with influences ranging from Dead or Alive, Pet Shop Boys, Depeche Mode to New Order.</p>
     </section>
-    <section class="music">
-      <h2>Music</h2>
-
+    <!-- END about -->
+    <h2 class="fade-in">Music</h2>
+      <section class="music grid">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fsoundcloud.com%2Fglitterandfilth%2Fpopular-tracks&key=462812a26b593f2dbfbfcbb14f6d699a" class="soundcloud-frame fade-in" frameborder="0"></iframe>
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Ffilthandglitter.bandcamp.com%2Falbum%2Fan-introduction-to-spite-harmony-ep&key=462812a26b593f2dbfbfcbb14f6d699a" class="bandcamp-frame fade-in" frameborder="0"></iframe>
       </section>
-    <section class="contact">
-      <div class="contact-info">
-        <h2>Get in touch</h2>
-        <p><strong>Email:</strong> <br>filthandglitter@protonmail.com</p>
-        <p><strong>Follow</strong> <br>
-          <i class="fa-brands fa-bandcamp" style="color: #ffffff;"></i>
-          <i class="fa-brands fa-soundcloud" style="color: #ffffff;"></i>
-          <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
-          <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-
+    <!-- END music -->
+    <section class="contact grid">
+      <div>
+        <h2 class="animate riseIn fade-in">Get in touch</h2>
+        <p class="fade-in">
+          <strong>Email:</strong> <br>
+          <a href="mailto:filthandglitter@protonmail.com">filthandglitter@protonmail.com</a>
+        </p>
+        <p class="fade-in"><strong>Follow:</strong> <br>
+          <span class="social-links">
+            <a href="https://filthandglitter.bandcamp.com/album/an-introduction-to-spite-harmony-ep">
+              <i class="fa-brands fa-bandcamp"></i>
+            </a>
+            <a href="https://soundcloud.com/glitterandfilth">
+              <i class="fa-brands fa-soundcloud"></i>
+            </a>
+            <a href="https://www.facebook.com/filthandglitter/">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCt19x6jL9lj1WLE7MEmeiyQ">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </span>
+          <!-- END social links -->
       </div>
-      <img src="img/02.jpg" alt="">
+      <img src="img/02.jpg" alt="image of woman with sunglasses" width="800" height="800" class="fade-in">
     </section>
-    <footer class="footer">Design: <a href="http://vivreay.co.uk">Vivienne Reay</a></footer>
-  </div>
+    <!-- END contact -->
+    <footer class="footer fade-in">
+      <p>Design: <a href="http://vivreay.co.uk">Vivienne Reay</a></p>
+    </footer>
+    <!-- END footer -->
+</div>
+<!-- END wrapper -->
+
 </body>
 </html>

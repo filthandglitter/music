@@ -1,200 +1,119 @@
- @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;1,700&display=swap');
-
-body {
-  background-color: #0a0909;
-  color: rgb(237, 236, 237);
-  font-family: 'Public Sans', sans-serif;
-  padding: 0;
-  margin: 0;
+:root {
+  color-scheme: light dark;
+  color: white;
+  background-color: rgb(16, 16, 16);
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .animated {
-    animation: none !important;
-  }
-}
-
 html {
-  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+*. 
+*::before, 
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+a {
+  color: white;
+  text-decoration: inherit;
+}
+a:hover {
+  color: yellow;
+}
+h1 {
+  margin: 2rem 0;
+  font-size: 7.388rem;
+  letter-spacing: -9.45637px;
+}
+h2 {
+  margin: 0 0 2rem 0;
+  font-size: 6.4rem;
+  letter-spacing: -10.2533px;
+  line-height: 6.538rem;
+}
+h1, 
+h2 {
+  line-height: 0.9;
+  font-style:italic;
+  font-weight: 700;
+}
+h1, 
+h2,
+.contact {
+  text-transform: uppercase;
+}
+p {
+  margin-top: 0;
+  font-size: 1.243rem;
+  line-height: 1.5;
 }
 
 .wrapper {
-  width: min(100vw - 3rem, 100ch);
+  width: min(69.375rem, calc(100% - 4rem));
   margin-inline: auto;
 }
 
-section {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit, 
-    minmax(30ch, 1fr));
-  gap: clamp(1.5rem, 6vmax, 3rem);
-}
-
-
 .header {
-  width: 40ch;
+  width: 40rem;
 }
 
-.about {
-
+.grid {
+  display: grid; 
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
-.footer {
-  display: flex;
-  height: 33.3333px;
-  padding:16px 0;
-  font-size: 10.1333px;
+/* 800px */
+@media (min-width: 50em) {
+  .grid {
+    grid-template-columns: 37.5rem auto;
+  }
 }
-
-
-h1 {
-  font-weight: 700;
-  font-size: 100px;
-  letter-spacing: -0.08em;
-  line-height: 94.5324px;
+.about img, 
+.contact img {
+  height: 25rem;
+  object-fit: cover;
 }
-
-h2 {
-  font-size: 103.299px;
-  letter-spacing: -8.26393px;
-  line-height: 91.4193px;
-}
-
-h1,
-h2 {
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-p {
-  font-size: 21.7px;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 30.0851px;
-}
-.contact p {
-  font-size: 13px;
-  line-height: 18.5456px;
-  text-transform: uppercase;
-}
-
-strong {
-  font-weight: 700;
-}
-
-a {
-  color: rgb(237, 236, 237);
-  text-decoration: none;
-}
-
-img {
-  display: block;
+.soundcloud-frame {
   width: 100%;
- }
+  height: 25rem;
+}
+.bandcamp-frame {
+  height: 25rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.footer p {
+  font-size: 0.813rem;
+  text-align: right;
+}
 
-
-
-
-
-@keyframes fade-Left {
-  0% {
-    opacity: 0.0;
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #333333;
+    background-color: white;
   }
-
-  100% {
-    opacity: 1.0;
+  a:hover {
+    color: blue;
   }
 }
 
-@keyframes pan-Left {
-  0% {
-    transform: translate(-80px, 0px);
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    transform: translate(0px, 0px);
-  }
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
 }
 
-@keyframes rise-Left {
-  0% {
-    transform: translate(0px, 80px);
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes rise-Right {
-  0% {
-    transform: translate(0px, 80px);
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-
-@keyframes pulse {
-  0% {
-    background-color: rgba(226, 226, 226, 0.05);
-  }
-
-  50% {
-    background-color: rgba(226, 226, 226, 0.1);
-  }
-
-  100% {
-    background-color: rgba(226, 226, 226, 0.05);
-  }
-}
-
-@keyframes fade-LEFT {
-  0% {
-    opacity: 0.0;
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    opacity: 1.0;
-  }
-}
-
-@keyframes fade-LEFT{
-  0% {
-    opacity: 0.0;
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    opacity: 1.0;
-  }
-}
-
-@keyframes pan-RIGHT {
-  0% {
-    transform: translate(-80px, 0px);
-    animation-timing-function: cubic-bezier(0.4, 0.8, 0.74, 1.0);
-  }
-
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes linear_fade {
-  0% {
-    opacity: 0.0;
-  }
-
-  100% {
-    opacity: 1.0;
-  }
+.fade-in.appear {
+  opacity: 1;
 }
