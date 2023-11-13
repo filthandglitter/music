@@ -77,6 +77,14 @@ p {
   .grid {
     grid-template-columns: 37.5rem auto;
   }
+  h1 {
+  margin: 1rem 0;
+  font-size: 4.388rem;
+  letter-spacing: -6.45637px;
+}
+  .header {
+  width: 30rem;
+}
 }
 .about img, 
 .contact img {
