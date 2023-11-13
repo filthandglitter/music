@@ -104,6 +104,9 @@ p {
     color: #333333;
     background-color: white;
   }
+  a {
+  color: #333333;
+}
   a:hover {
     color: blue;
   }
