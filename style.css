@@ -53,8 +53,8 @@ h2,
 }
 p {
   margin-top: 0;
-  font-size: 1.243rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.1;
 }
 
 .wrapper {
@@ -119,6 +119,11 @@ h2 {
   font-size: 6.4rem;
   letter-spacing: -10.2533px;
   line-height: 6.538rem;
+}
+  p {
+  margin-top: 0;
+  font-size: 1.243rem;
+  line-height: 1.5;
 }
   .header {
   width: 40rem;
