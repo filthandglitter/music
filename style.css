@@ -35,10 +35,10 @@ h1 {
   letter-spacing: -6.45637px;
 }
 h2 {
-  margin: 0 0 2rem 0;
-  font-size: 6.4rem;
-  letter-spacing: -10.2533px;
-  line-height: 6.538rem;
+  margin: 0 0 1rem 0;
+  font-size: 3.4rem;
+  letter-spacing: -7.2533px;
+  line-height: 3.538rem;
 }
 h1, 
 h2 {
@@ -113,6 +113,12 @@ p {
   margin: 2rem 0;
   font-size: 7.388rem;
   letter-spacing: -9.45637px;
+}
+h2 {
+  margin: 0 0 2rem 0;
+  font-size: 6.4rem;
+  letter-spacing: -10.2533px;
+  line-height: 6.538rem;
 }
   .header {
   width: 40rem;
