@@ -40,6 +40,8 @@ a {
   line-height: 2;
   font-weight: 400;
   letter-spacing: 0.02286rem;
+
+  overflow-wrap: break-word;
 }
 a {
   color: #f7f8f8;
@@ -58,28 +60,31 @@ a {
 }
 
 /* GRID */
-.content-grid,
-.full-width {
-  --padding-inline: 2rem;
-  --content-max-width: 70ch;
-  --breakout-max-width: 85ch;
+@media (min-width: 60em) {
+  .content-grid,
+  .full-width {
+    --padding-inline: 2rem;
+    --content-max-width: 70ch;
+    --breakout-max-width: 85ch;
 
-  --breakout-size: calc(
-    (var(--breakout-max-width) - var(--content-max-width)) / 2
-  );
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
 
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(
-      100% - (var(--padding-inline) * 2),
-      var(--content-max-width)
-    )
-    [content-end]
-    minmax(0, var(--breakout-size)) [breakout-end]
-    minmax(var(--padding-inline), 1fr) [full-width-end];
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+  }
 }
+
 .content-grid > :not(.breakout, .full-width),
 .full-width > :not(.breakout, .full-width) {
   grid-column: content;
@@ -100,8 +105,14 @@ a {
 }
 .header__content {
   padding: 2rem;
-  margin: 4rem 0;
+  margin: 0;
   position: relative;
+}
+@media (min-width: 60em) {
+  .header__content {
+    padding: 2rem;
+    margin: 4rem 0;
+  }
 }
 .header__content::after {
   content: "";
@@ -113,7 +124,13 @@ a {
 }
 /* ABOUT */
 .about {
-  margin-bottom: 4rem;
+  padding-inline: 0;
+}
+@media (min-width: 60em) {
+  .about {
+    padding-inline: 0;
+    margin-bottom: 4rem;
+  }
 }
 .social-links {
   display: flex;
@@ -124,7 +141,12 @@ a {
 }
 /* MUSIC */
 .music {
-  margin: 4rem 0;
+  margin: 2rem;
+}
+@media (min-width: 60em) {
+  .music {
+    margin: 4rem 0;
+  }
 }
 .soundcloud-frame {
   width: 100%;
@@ -132,7 +154,18 @@ a {
 }
 /* FOOTER */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem;
+  margin: 1rem;
+}
+.footer p,
+.footer a {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+@media (min-width: 60em) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+  }
 }
