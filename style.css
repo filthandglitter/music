@@ -98,7 +98,7 @@ a {
 /* HEADER */
 .header {
   background-color: #020a0f;
-  background-image: url("img/bg.jpg");
+  background-image: url("img/bg.webp");
   background-size: cover;
   background-position: center;
   isolation: isolate;
